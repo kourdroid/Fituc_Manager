@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
 
 <p align="center">
@@ -64,3 +65,7 @@ If you discover a security vulnerability within Laravel, please send an e-mail t
 ## License
 
 The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+=======
+# Fituc_Manager
+A Laravel-based festival management platform that streamlines the artist registration process for the annual theatre festival at Hasan II University, Faculty of Letters, Ben M'Sik. This web app replaces the traditional DOCX-based application process with an online submission and management system.
+>>>>>>> 40cedbc5fabfbfbbb203dc1b7a5d85388213835c
