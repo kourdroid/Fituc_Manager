@@ -10,10 +10,11 @@ class CreateCompanyInfosTable extends Migration
         Schema::create('company_infos', function (Blueprint $table) {
             $table->id();
             $table->unsignedBigInteger('application_id');
-            $table->integer('year_created')->nullable(); // Year of troupe creation
-$table->enum('director_type', ['professional', 'amateur'])->nullable(); // Director type
-            $table->string('repertoire')->nullable();
-            $table->text('additional_info')->nullable();
+            $table->integer('founded_year')->nullable(); // Year of troupe creation
+            $table->text('background')->nullable(); // Company background
+            $table->string('repertoire_style')->nullable(); // Repertoire style
+            $table->string('already_played')->nullable(); // Whether the play has already been performed
+            $table->integer('actors_count')->nullable(); // Number of actors
             $table->timestamps();
 
             $table->foreign('application_id')

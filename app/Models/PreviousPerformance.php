@@ -5,14 +5,19 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class UpcomingPerformance extends Model
+class PreviousPerformance extends Model
 {
     use HasFactory;
 
     protected $fillable = [
         'application_id',
+        'performance_number',
+        'place',
         'performance_date',
-        'place'
+    ];
+
+    protected $casts = [
+        'performance_date' => 'date',
     ];
 
     public function application()

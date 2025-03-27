@@ -8,7 +8,14 @@ class CompanyInfo extends Model
 {
     use HasFactory;
 
-    protected $fillable = ['application_id', 'presentation_text', 'repertoire', 'additional_info'];
+    protected $fillable = [
+        'application_id', 
+        'founded_year',
+        'background',
+        'repertoire_style',
+        'already_played',
+        'actors_count'
+    ];
 
     public function application()
     {

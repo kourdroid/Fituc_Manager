@@ -10,13 +10,12 @@ class CreatePlayDetailsTable extends Migration
         Schema::create('play_details', function (Blueprint $table) {
             $table->id();
             $table->unsignedBigInteger('application_id');
-            $table->string('play_title');
-            $table->string('director')->nullable();
-            $table->string('author')->nullable();
-            $table->integer('duration')->nullable(); // duration in minutes
-            $table->text('summary_en')->nullable(); // English
-            $table->text('summary_fr')->nullable(); // French
-            $table->text('summary_ar')->nullable(); // Arabic            $table->string('play_link')->nullable();
+            $table->string('language')->nullable();
+            $table->date('premiere_date')->nullable();
+            $table->text('english_summary')->nullable();
+            $table->text('french_summary')->nullable();
+            $table->text('arabic_summary')->nullable();
+            $table->string('play_link')->nullable();
             $table->timestamps();
 
             $table->foreign('application_id')

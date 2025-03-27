@@ -11,11 +11,11 @@ class PlayDetail extends Model
 
     protected $fillable = [
         'application_id',
-        'play_title',
-        'director',
-        'author',
-        'duration',
-        'summary',
+        'language',
+        'premiere_date',
+        'english_summary',
+        'french_summary',
+        'arabic_summary',
         'play_link'
     ];
 

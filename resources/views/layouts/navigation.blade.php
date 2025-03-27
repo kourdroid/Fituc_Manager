@@ -15,6 +15,16 @@
                     <x-nav-link :href="route('dashboard')" :active="request()->routeIs('dashboard')">
                         {{ __('Dashboard') }}
                     </x-nav-link>
+                    
+                    <!-- Application Menu -->
+                    <x-nav-link :href="route('application.index')" :active="request()->routeIs('application.*')">
+                        {{ __('Applications') }}
+                    </x-nav-link>
+                    
+                    <!-- Create Application -->
+                    <x-nav-link :href="route('application.create')" :active="request()->routeIs('application.create')">
+                        {{ __('New Application') }}
+                    </x-nav-link>
                 </div>
             </div>
 
@@ -69,6 +79,16 @@
         <div class="pt-2 pb-3 space-y-1">
             <x-responsive-nav-link :href="route('dashboard')" :active="request()->routeIs('dashboard')">
                 {{ __('Dashboard') }}
+            </x-responsive-nav-link>
+            
+            <!-- Mobile Application Menu -->
+            <x-responsive-nav-link :href="route('application.index')" :active="request()->routeIs('application.*')">
+                {{ __('Applications') }}
+            </x-responsive-nav-link>
+            
+            <!-- Mobile Create Application -->
+            <x-responsive-nav-link :href="route('application.create')" :active="request()->routeIs('application.create')">
+                {{ __('New Application') }}
             </x-responsive-nav-link>
         </div>
 

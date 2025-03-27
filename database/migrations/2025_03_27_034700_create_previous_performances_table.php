@@ -1,17 +1,19 @@
 <?php
+
 use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateUpcomingPerformancesTable extends Migration
+class CreatePreviousPerformancesTable extends Migration
 {
     public function up()
     {
-        Schema::create('upcoming_performances', function (Blueprint $table) {
+        Schema::create('previous_performances', function (Blueprint $table) {
             $table->id();
             $table->unsignedBigInteger('application_id');
-            $table->date('performance_date')->nullable();
+            $table->integer('performance_number')->nullable();
             $table->string('place')->nullable();
+            $table->date('performance_date')->nullable();
             $table->timestamps();
 
             $table->foreign('application_id')
@@ -22,6 +24,6 @@ class CreateUpcomingPerformancesTable extends Migration
 
     public function down()
     {
-        Schema::dropIfExists('upcoming_performances');
+        Schema::dropIfExists('previous_performances');
     }
 }

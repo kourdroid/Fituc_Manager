@@ -1,0 +1,22 @@
+/* Admin custom styles */
+
+/* Application status indicators */
+.status-approved {
+    background-color: #d1fae5;
+    color: #065f46;
+}
+
+.status-rejected {
+    background-color: #fee2e2;
+    color: #7f1d1d;
+}
+
+.status-review {
+    background-color: #fef3c7;
+    color: #78350f;
+}
+
+.status-submitted {
+    background-color: #dbeafe;
+    color: #1e3a8a;
+}

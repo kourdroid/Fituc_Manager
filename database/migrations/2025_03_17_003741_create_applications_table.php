@@ -14,6 +14,12 @@ class CreateApplicationsTable extends Migration
             $table->string('university');
             $table->date('submission_date')->nullable();
             $table->string('troupe_name');
+            $table->string('play_title')->nullable();
+            $table->string('author')->nullable();
+            $table->string('director')->nullable();
+            $table->integer('duration')->nullable();
+            $table->text('summary')->nullable();
+            $table->enum('status', ['submitted', 'under_review', 'approved', 'rejected'])->default('submitted');
             $table->timestamps();
         });
     }

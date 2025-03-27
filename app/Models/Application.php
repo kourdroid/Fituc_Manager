@@ -9,7 +9,20 @@ class Application extends Model
 {
     use HasFactory;
 
-    protected $fillable = ['country', 'university', 'submission_date', 'troupe_name'];
+    protected $fillable = [
+        'country', 
+        'university', 
+        'submission_date', 
+        'troupe_name',
+        'play_title',
+        'duration',
+        'summary',
+        'author',
+        'director',
+        'user_id',
+        'status',
+        'feedback'
+    ];
 
     public function companyInfo()
     {
@@ -49,5 +62,10 @@ class Application extends Model
     public function attachments()
     {
         return $this->hasMany(Attachment::class);
+    }
+    
+    public function user()
+    {
+        return $this->belongsTo(User::class);
     }
 }
